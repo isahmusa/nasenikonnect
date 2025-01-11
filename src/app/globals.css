@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+@keyframes slide-bg {
+  0% {
+      background-image: url('/images/slide3.jpg');
+  }
+  35% {
+      background-image: url('/images/slider2.jpg');
+  }
+  60% {
+      background-image: url('/images/slider3.jpg');
+  }
+  85% {
+      background-image: url('/images/slider4.jpg');
+ 
+  }
+}
+
+.animate-slide-bg {
+  animation: slide-bg 16s infinite linear;
+  background-size: cover;
+  background-position: center;
+}
+
