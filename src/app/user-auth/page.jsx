@@ -108,7 +108,7 @@ const page = () => {
                 <div className="bg-[#001f54] bg-opacity-70 p-8 rounded-lg shadow-xl mt-72">
                   <h1 className="text-5xl font-bold mb-4">NASENIKonnect</h1>
                   <p className="text-lg font-light">
-                    Enhancing Collaboration and Innovation for National Development
+                    Connecting Minds, Driving Innovation for National Progress
                   </p>
                 </div>
               </div>
@@ -210,7 +210,7 @@ const page = () => {
       {/* Call to Action */}
       <section className="bg-[#001f54] py-10 text-center text-white">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          Ready to Transform Collaboration?
+          Ready to Transform The You Communicate?
         </h2>
         <Button
           className="bg-white text-[#001f54] font-semibold px-6 py-2 rounded-full hover:bg-gray-100 mt-4"
