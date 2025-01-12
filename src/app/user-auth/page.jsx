@@ -75,7 +75,7 @@ const page = () => {
             LOGIN
           </Button>
           <a
-            href="https://naseni-chatbot.vercel.app"
+            href="https://nasenichatbot.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#0066cc] via-[#004080] to-[#00264d] text-white font-semibold py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg text-xs md:text-sm hover:scale-105 transform"
@@ -210,7 +210,7 @@ const page = () => {
       {/* Call to Action */}
       <section className="bg-[#001f54] py-10 text-center text-white">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          Ready to Transform The You Communicate
+          Ready to Transform The Way You Communicate
         </h2>
         <Button
           className="bg-white text-[#001f54] font-semibold px-6 py-2 rounded-full hover:bg-gray-100 mt-4"
