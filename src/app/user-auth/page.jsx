@@ -163,7 +163,7 @@ const page = () => {
         by offering real-time assistance about NASENI's initiatives and innovative products.
       </p>
        <a
-            href="https://nasenichatbot.vercel.app"
+            href="https://nasenichatbot.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#0066cc] via-[#004080] to-[#00264d] text-white font-semibold py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg text-xs md:text-sm hover:scale-105 transform"
