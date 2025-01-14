@@ -165,7 +165,7 @@ const page = () => {
       <Button
         className="bg-gradient-to-r from-[#0066cc] via-[#004080] to-[#00264d] text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transform mt-2"
         onClick={() =>
-          window.open("https://naseni-chatbot.vercel.app", "_blank")
+          window.open("window.open("https://naseni-chatbot.vercel.app", "_blank")", "_blank")
         }
       >
         Launch Chatbot
@@ -212,9 +212,12 @@ const page = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
           Ready to Transform The Way You Communicate
         </h2>
-        <Button
-          className="bg-white text-[#001f54] font-semibold px-6 py-2 rounded-full hover:bg-gray-100 mt-4"
-          onClick={handleLogin}
+       <Button
+            className="bg-gradient-to-r from-[#0066cc] via-[#004080] to-[#00264d] text-white font-semibold py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg text-xs md:text-sm hover:scale-105 transform"
+            onClick={handleLogin}
+          >
+            LOGIN
+          </Button>
         >
           Get Started Now
         </Button>
@@ -231,7 +234,7 @@ const page = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Musa Danladi Isah
+      Musa Danladi Isah: NASENI ICT HQ
     </a>
   </p>
   {/* Social Media Links */}
