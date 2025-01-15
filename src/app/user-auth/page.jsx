@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Globe, Laptop, Zap } from "lucide-react";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -17,16 +18,11 @@ const page = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Block copy, cut, and context menu actions
     const preventActions = (e) => e.preventDefault();
-
-    // Add listeners
     document.addEventListener("copy", preventActions);
     document.addEventListener("cut", preventActions);
     document.addEventListener("contextmenu", preventActions);
     document.addEventListener("dragstart", preventActions);
-
-    // Clean up listeners
     return () => {
       document.removeEventListener("copy", preventActions);
       document.removeEventListener("cut", preventActions);
@@ -60,7 +56,7 @@ const page = () => {
         <div className="flex items-center ml-4">
           <Image
             src="/images/logo.png"
-            width={250}
+            width={170}
             height={400}
             alt="NASENI Logo"
             className="rounded-md"
@@ -75,7 +71,7 @@ const page = () => {
             LOGIN
           </Button>
           <a
-            href="https://nasenichatbot.vercel.app"
+            href="https://naseni-chatbot.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#0066cc] via-[#004080] to-[#00264d] text-white font-semibold py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg text-xs md:text-sm hover:scale-105 transform"
@@ -95,7 +91,7 @@ const page = () => {
           navigation
           loop
         >
-          {["/images/slider3.jpg", "/images/slider2.jpg", "/images/slider3.jpg"].map((image, index) => (
+          {["/images/slider2.jpg", "/images/slider2.jpg", "/images/slider3.jpg"].map((image, index) => (
             <SwiperSlide key={index}>
               <div
                 className="h-screen flex items-center justify-center text-white text-center"
@@ -108,7 +104,7 @@ const page = () => {
                 <div className="bg-[#001f54] bg-opacity-70 p-8 rounded-lg shadow-xl mt-72">
                   <h1 className="text-5xl font-bold mb-4">NASENIKonnect</h1>
                   <p className="text-lg font-light">
-                    Connecting Minds, Driving Innovation for National Progress
+                    Enhancing Collaboration and Innovation for National Development
                   </p>
                 </div>
               </div>
@@ -117,7 +113,7 @@ const page = () => {
         </Swiper>
       </section>
 
-      {/* About Us Section */}
+        {/* About Us Section */}
 <section className="py-10 bg-gray-100 px-4 md:px-8">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
     <div className="space-y-4">
@@ -145,6 +141,7 @@ const page = () => {
   </div>
 </section>
 
+
 {/* Chatbot and Login Section */}
 <section className="py-10 bg-gray-100 px-4 md:px-8">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -162,7 +159,7 @@ const page = () => {
         The NASENIKonnect chatbot simplifies your interactions, enhancing productivity on the platform
         by offering real-time assistance about NASENI's initiatives and innovative products.
       </p>
-       <Button
+      <Button
         className="bg-gradient-to-r from-[#0066cc] via-[#004080] to-[#00264d] text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transform mt-2"
         onClick={() =>
           window.open("https://nasenichatbot.vercel.app", "_blank")
@@ -178,6 +175,47 @@ const page = () => {
       height={300}
       className="rounded-lg shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-110 hover:rotate-2" // Added animation classes
     />
+  </div>
+</section>
+
+ {/* Why Choose NASENIKonnect */}
+ <section
+  className="py-24 bg-blue relative overflow-hidden bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/slider3.jpg')" }}
+>
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div className="relative container mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white animate-bounce">
+      Why Choose NASENIKonnect
+    </h2>
+    <p className="text-lg text-center text-gray-200 mb-12 animate-fade-in">
+      Empowering seamless communication globally.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="p-6 text-center animate-fade-in">
+        <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
+        <h3 className="text-xl font-semibold mb-2 text-white">Global Reach</h3>
+        <p className="text-gray-300">
+          Connect with participants from anywhere in the world
+        </p>
+      </div>
+      <div className="p-6 text-center animate-fade-in delay-100">
+        <Laptop className="h-12 w-12 text-primary mx-auto mb-4" />
+        <h3 className="text-xl font-semibold mb-2 text-white">Cross-Platform</h3>
+        <p className="text-gray-300">
+          Works seamlessly across all devices and browsers
+        </p>
+      </div>
+      <div className="p-6 text-center animate-fade-in delay-200">
+        <Zap className="h-12 w-12 text-primary mx-auto mb-4" />
+        <h3 className="text-xl font-semibold mb-2 text-white">
+          Lightning Fast
+        </h3>
+        <p className="text-gray-300">
+          Low-latency video and audio transmission
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -210,14 +248,11 @@ const page = () => {
       {/* Call to Action */}
       <section className="bg-[#001f54] py-10 text-center text-white">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          Ready to Transform The Way You Communicate
+        Ready to Transform Your Virtual Meetings?
         </h2>
-       <Button
-            className="bg-gradient-to-r from-[#0066cc] via-[#004080] to-[#00264d] text-white font-semibold py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg text-xs md:text-sm hover:scale-105 transform"
-            onClick={handleLogin}
-          >
-            LOGIN
-          </Button>
+        <Button
+          className="bg-white text-[#001f54] font-semibold px-6 py-2 rounded-full hover:bg-gray-100 mt-4"
+          onClick={handleLogin}
         >
           Get Started Now
         </Button>
@@ -229,12 +264,12 @@ const page = () => {
   <p>
     Developed & Designed by{" "}
     <a
-      href="https://github.com/isahmusa"
+      href="#"
       className="text-yellow-300 underline"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Musa Danladi Isah: NASENI ICT HQ
+      Musa Danladi Isah: NASENI HQ ICT
     </a>
   </p>
   {/* Social Media Links */}
